@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # 代码8-6 构建关联规则模型
 from numpy import *
 import pandas as pd
