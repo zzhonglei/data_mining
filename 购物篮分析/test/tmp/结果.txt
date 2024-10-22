@@ -58,6 +58,7 @@ memory usage: 677.7+ KB
 144      可可饮料     22  非酒精饮料       0.002897
 
 /opt/anaconda3/envs/data_mining/bin/python /Users/zhonglei/Library/Mobile Documents/com~apple~CloudDocs/Code/pythonCode/data_mining/购物篮分析/test/code/03_Apriori.py
+Apriori算法：
 frozenset({'水果/蔬菜汁'}) --> frozenset({'全脂牛奶'}) 支持度 0.02664 置信度： 0.368495 lift值为： 1.44216
 frozenset({'人造黄油'}) --> frozenset({'全脂牛奶'}) 支持度 0.024199 置信度： 0.413194 lift值为： 1.617098
 frozenset({'仁果类水果'}) --> frozenset({'全脂牛奶'}) 支持度 0.030097 置信度： 0.397849 lift值为： 1.557043
@@ -84,3 +85,59 @@ frozenset({'全脂牛奶', '酸奶'}) --> frozenset({'其他蔬菜'}) 支持度 
 frozenset({'其他蔬菜', '酸奶'}) --> frozenset({'全脂牛奶'}) 支持度 0.022267 置信度： 0.512881 lift值为： 2.007235
 frozenset({'全脂牛奶', '根茎类蔬菜'}) --> frozenset({'其他蔬菜'}) 支持度 0.023183 置信度： 0.474012 lift值为： 2.44977
 frozenset({'根茎类蔬菜', '其他蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.023183 置信度： 0.48927 lift值为： 1.914833
+
+Eclat算法:
+frozenset({'其他蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.07483 置信度： 0.38676 lift值为： 1.51363
+frozenset({'酸奶'}) --> frozenset({'全脂牛奶'}) 支持度 0.05602 置信度： 0.4016 lift值为： 1.57174
+frozenset({'根茎类蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.04891 置信度： 0.44869 lift值为： 1.75603
+frozenset({'根茎类蔬菜'}) --> frozenset({'其他蔬菜'}) 支持度 0.04738 置信度： 0.4347 lift值为： 2.2466
+frozenset({'热带水果'}) --> frozenset({'全脂牛奶'}) 支持度 0.0423 置信度： 0.4031 lift值为： 1.57759
+frozenset({'糕点'}) --> frozenset({'全脂牛奶'}) 支持度 0.03325 置信度： 0.37371 lift值为： 1.46259
+frozenset({'酸奶油'}) --> frozenset({'全脂牛奶'}) 支持度 0.03223 置信度： 0.44965 lift值为： 1.75975
+frozenset({'柑橘类水果'}) --> frozenset({'全脂牛奶'}) 支持度 0.0305 置信度： 0.36855 lift值为： 1.44238
+frozenset({'仁果类水果'}) --> frozenset({'全脂牛奶'}) 支持度 0.0301 置信度： 0.39785 lift值为： 1.55704
+frozenset({'本地蛋类'}) --> frozenset({'全脂牛奶'}) 支持度 0.02999 置信度： 0.47276 lift值为： 1.8502
+frozenset({'酸奶油'}) --> frozenset({'其他蔬菜'}) 支持度 0.02888 置信度： 0.40284 lift值为： 2.08192
+frozenset({'黄油'}) --> frozenset({'全脂牛奶'}) 支持度 0.02755 置信度： 0.49725 lift值为： 1.94605
+frozenset({'水果/蔬菜汁'}) --> frozenset({'全脂牛奶'}) 支持度 0.02664 置信度： 0.3685 lift值为： 1.44216
+frozenset({'凝乳'}) --> frozenset({'全脂牛奶'}) 支持度 0.02613 置信度： 0.49046 lift值为： 1.91948
+frozenset({'黑面包'}) --> frozenset({'全脂牛奶'}) 支持度 0.02522 置信度： 0.38871 lift值为： 1.52129
+frozenset({'人造黄油'}) --> frozenset({'全脂牛奶'}) 支持度 0.0242 置信度： 0.41319 lift值为： 1.6171
+frozenset({'全脂牛奶', '根茎类蔬菜'}) --> frozenset({'其他蔬菜'}) 支持度 0.02318 置信度： 0.47401 lift值为： 2.44977
+frozenset({'根茎类蔬菜', '其他蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.02318 置信度： 0.48927 lift值为： 1.91483
+frozenset({'本地蛋类'}) --> frozenset({'其他蔬菜'}) 支持度 0.02227 置信度： 0.35096 lift值为： 1.81382
+frozenset({'全脂牛奶', '酸奶'}) --> frozenset({'其他蔬菜'}) 支持度 0.02227 置信度： 0.39746 lift值为： 2.05413
+frozenset({'酸奶', '其他蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.02227 置信度： 0.51288 lift值为： 2.00723
+frozenset({'猪肉'}) --> frozenset({'全脂牛奶'}) 支持度 0.02217 置信度： 0.38448 lift值为： 1.50472
+frozenset({'猪肉'}) --> frozenset({'其他蔬菜'}) 支持度 0.02166 置信度： 0.37566 lift值为： 1.94148
+frozenset({'牛肉'}) --> frozenset({'全脂牛奶'}) 支持度 0.02125 置信度： 0.40504 lift值为： 1.58518
+frozenset({'冷冻蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.02044 置信度： 0.42495 lift值为： 1.66309
+frozenset({'黄油'}) --> frozenset({'其他蔬菜'}) 支持度 0.02003 置信度： 0.36147 lift值为： 1.86812
+
+FP-growth算法:
+frozenset({'柑橘类水果'}) --> frozenset({'全脂牛奶'}) 支持度 0.0305 置信度： 0.36855 lift值为： 1.44238
+frozenset({'人造黄油'}) --> frozenset({'全脂牛奶'}) 支持度 0.0242 置信度： 0.41319 lift值为： 1.6171
+frozenset({'酸奶'}) --> frozenset({'全脂牛奶'}) 支持度 0.05602 置信度： 0.4016 lift值为： 1.57174
+frozenset({'酸奶', '其他蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.02227 置信度： 0.51288 lift值为： 2.00723
+frozenset({'酸奶', '全脂牛奶'}) --> frozenset({'其他蔬菜'}) 支持度 0.02227 置信度： 0.39746 lift值为： 2.05413
+frozenset({'热带水果'}) --> frozenset({'全脂牛奶'}) 支持度 0.0423 置信度： 0.4031 lift值为： 1.57759
+frozenset({'仁果类水果'}) --> frozenset({'全脂牛奶'}) 支持度 0.0301 置信度： 0.39785 lift值为： 1.55704
+frozenset({'其他蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.07483 置信度： 0.38676 lift值为： 1.51363
+frozenset({'黄油'}) --> frozenset({'全脂牛奶'}) 支持度 0.02755 置信度： 0.49725 lift值为： 1.94605
+frozenset({'黄油'}) --> frozenset({'其他蔬菜'}) 支持度 0.02003 置信度： 0.36147 lift值为： 1.86812
+frozenset({'凝乳'}) --> frozenset({'全脂牛奶'}) 支持度 0.02613 置信度： 0.49046 lift值为： 1.91948
+frozenset({'牛肉'}) --> frozenset({'全脂牛奶'}) 支持度 0.02125 置信度： 0.40504 lift值为： 1.58518
+frozenset({'水果/蔬菜汁'}) --> frozenset({'全脂牛奶'}) 支持度 0.02664 置信度： 0.3685 lift值为： 1.44216
+frozenset({'糕点'}) --> frozenset({'全脂牛奶'}) 支持度 0.03325 置信度： 0.37371 lift值为： 1.46259
+frozenset({'根茎类蔬菜'}) --> frozenset({'其他蔬菜'}) 支持度 0.04738 置信度： 0.4347 lift值为： 2.2466
+frozenset({'根茎类蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.04891 置信度： 0.44869 lift值为： 1.75603
+frozenset({'根茎类蔬菜', '其他蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.02318 置信度： 0.48927 lift值为： 1.91483
+frozenset({'根茎类蔬菜', '全脂牛奶'}) --> frozenset({'其他蔬菜'}) 支持度 0.02318 置信度： 0.47401 lift值为： 2.44977
+frozenset({'黑面包'}) --> frozenset({'全脂牛奶'}) 支持度 0.02522 置信度： 0.38871 lift值为： 1.52129
+frozenset({'酸奶油'}) --> frozenset({'全脂牛奶'}) 支持度 0.03223 置信度： 0.44965 lift值为： 1.75975
+frozenset({'酸奶油'}) --> frozenset({'其他蔬菜'}) 支持度 0.02888 置信度： 0.40284 lift值为： 2.08192
+frozenset({'猪肉'}) --> frozenset({'全脂牛奶'}) 支持度 0.02217 置信度： 0.38448 lift值为： 1.50472
+frozenset({'猪肉'}) --> frozenset({'其他蔬菜'}) 支持度 0.02166 置信度： 0.37566 lift值为： 1.94148
+frozenset({'本地蛋类'}) --> frozenset({'全脂牛奶'}) 支持度 0.02999 置信度： 0.47276 lift值为： 1.8502
+frozenset({'本地蛋类'}) --> frozenset({'其他蔬菜'}) 支持度 0.02227 置信度： 0.35096 lift值为： 1.81382
+frozenset({'冷冻蔬菜'}) --> frozenset({'全脂牛奶'}) 支持度 0.02044 置信度： 0.42495 lift值为： 1.66309
