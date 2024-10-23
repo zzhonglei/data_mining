@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import MultiLabelBinarizer
 from mlxtend.frequent_patterns import association_rules
 from itertools import combinations
+
 # 读取数据
 def readData(inputfile):
     data = pd.read_csv(inputfile, encoding='gbk')
@@ -19,7 +20,6 @@ def eclat(df_encoded, min_support=0.02, max_len=2):
         support = df_encoded[column].sum() / len(df_encoded)
         if support >= min_support:
             itemsets[frozenset([column])] = support
-
     # 生成多项组合，2项集及更高阶项集
     for k in range(2, max_len + 1):
         for item_comb in combinations(df_encoded.columns, k):
@@ -27,7 +27,6 @@ def eclat(df_encoded, min_support=0.02, max_len=2):
             support = combined.sum() / len(df_encoded)
             if support >= min_support:
                 itemsets[frozenset(item_comb)] = support
-
     return pd.DataFrame(list(itemsets.items()), columns=['itemsets', 'support'])
 
 if __name__ == '__main__':

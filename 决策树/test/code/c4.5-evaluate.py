@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from C45 import C45Classifier
+from airquality import C45Classifier
 from sklearn.metrics import accuracy_score
 from tqdm import tqdm
 import matplotlib.pyplot as plt
