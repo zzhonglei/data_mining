@@ -85,12 +85,12 @@ if __name__ == '__main__':
         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=2,threshold=1e-3)
 
         # 设置训练的参数
-        epochs = 1000
+        epochs = 100
         batch_size = 32
         loss_values = train(model,x_train,y_train,loss,epochs,optimizer,scheduler,torch.device('mps'))
 
         model.to(torch.device('cpu'))
-        predictions = model.predict(x_pre)  # 使用封装的预测方法
+        predictions = model.predict(x_pre)
         predictions_original = predictions * data_std['y'] + data_mean['y']
         original_data = y_train*data_std['y'] + data_mean['y']
         print(f'Predictions (original scale): {original_data.tolist()}')
@@ -119,4 +119,4 @@ if __name__ == '__main__':
         df = pd.DataFrame(loss_values, columns=['Loss'])
         # 将 DataFrame 存储到 CSV 文件中
         df.to_csv('loss_values.csv', index=False)
-        torch.save(model.state_dict(), 'params.pt')
+        # torch.save(model.state_dict(), 'params.pt')
